@@ -1,0 +1,264 @@
+DEBUG 2016-11-05 15:22:58,497: 	 Executing command: 'submit'
+DEBUG 2016-11-05 15:22:58,498: 	 Found CRAB cache file /home/users/rclsa/.crab3
+DEBUG 2016-11-05 15:22:58,506: 	 Checking credentials
+DEBUG 2016-11-05 15:22:58,506: 	 Found proxy file /tmp/x509up_u31150
+DEBUG 2016-11-05 15:22:58,506: 	 Getting proxy life time left
+DEBUG 2016-11-05 15:22:58,610: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31150 -timeleft
+ output : 431651
+
+ error: 
+ retcode : 0
+DEBUG 2016-11-05 15:22:58,715: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31150 -actimeleft
+ output : 431651
+
+ error: 
+ retcode : 0
+DEBUG 2016-11-05 15:22:58,715: 	 Proxy valid for 119:54:11 hours
+INFO 2016-11-05 15:22:58,715: 	 Will use CRAB configuration file crab_cfg_lowEnergyElectron.py
+DEBUG 2016-11-05 15:22:58,715: 	 Loading CRAB configuration file.
+DEBUG 2016-11-05 15:22:58,718: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2016-11-05 15:22:58,718: 	 Working area '/home/users/rclsa/RegressionTraining/newTreeMaker/CMSSW_8_0_12/src/SimpleFlatTreeProducer/SimpleNtuplizer/cfgs/crab_TKNtup_05Nov_ElectronLowPt' already exists 
+Please change the requestName in the config file
+ERROR 2016-11-05 15:22:58,718: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 302, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 394, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/home/users/rclsa/RegressionTraining/newTreeMaker/CMSSW_8_0_12/src/SimpleFlatTreeProducer/SimpleNtuplizer/cfgs/crab_TKNtup_05Nov_ElectronLowPt' already exists 
+Please change the requestName in the config file
+DEBUG 2016-12-12 05:17:12,710: 	 Executing command: 'submit'
+DEBUG 2016-12-12 05:17:12,711: 	 Found CRAB cache file /home/users/rclsa/.crab3
+DEBUG 2016-12-12 05:17:12,718: 	 Checking credentials
+DEBUG 2016-12-12 05:17:12,718: 	 Found proxy file /tmp/x509up_u31150
+DEBUG 2016-12-12 05:17:12,718: 	 Getting proxy life time left
+DEBUG 2016-12-12 05:17:12,821: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31150 -timeleft
+ output : 431109
+
+ error: 
+ retcode : 0
+DEBUG 2016-12-12 05:17:12,924: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31150 -actimeleft
+ output : 431109
+
+ error: 
+ retcode : 0
+DEBUG 2016-12-12 05:17:12,924: 	 Proxy valid for 119:45:09 hours
+ERROR 2016-12-12 05:17:12,925: 	 CRAB configuration file crabConfig.py not found.
+ERROR 2016-12-12 05:17:12,925: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 298, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 46, in loadConfig
+    raise ConfigurationException("CRAB configuration file %s not found." % (configname))
+ConfigurationException: CRAB configuration file crabConfig.py not found.
+DEBUG 2016-12-12 05:28:36,524: 	 Executing command: 'submit'
+DEBUG 2016-12-12 05:28:36,525: 	 Found CRAB cache file /home/users/rclsa/.crab3
+DEBUG 2016-12-12 05:28:36,533: 	 Checking credentials
+DEBUG 2016-12-12 05:28:36,537: 	 Found proxy file /tmp/x509up_u31150
+DEBUG 2016-12-12 05:28:36,537: 	 Getting proxy life time left
+DEBUG 2016-12-12 05:28:36,641: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31150 -timeleft
+ output : 430425
+
+ error: 
+ retcode : 0
+DEBUG 2016-12-12 05:28:36,745: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31150 -actimeleft
+ output : 430425
+
+ error: 
+ retcode : 0
+DEBUG 2016-12-12 05:28:36,745: 	 Proxy valid for 119:33:45 hours
+INFO 2016-12-12 05:28:36,745: 	 Will use CRAB configuration file crab_DY.py
+DEBUG 2016-12-12 05:28:36,745: 	 Loading CRAB configuration file.
+DEBUG 2016-12-12 05:28:36,747: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2016-12-12 05:28:36,748: 	 Working area '/home/users/rclsa/RegressionTraining/miniTreeMaker/CMSSW_8_0_22/src/SimpleFlatTreeProducer/SimpleNtuplizer/cfgs/crab_aMCatNLODY' already exists 
+Please change the requestName in the config file
+ERROR 2016-12-12 05:28:36,748: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 302, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 394, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/home/users/rclsa/RegressionTraining/miniTreeMaker/CMSSW_8_0_22/src/SimpleFlatTreeProducer/SimpleNtuplizer/cfgs/crab_aMCatNLODY' already exists 
+Please change the requestName in the config file
+DEBUG 2016-12-12 09:33:26,491: 	 Executing command: 'status'
+DEBUG 2016-12-12 09:33:26,492: 	 Found CRAB cache file /home/users/rclsa/.crab3
+ERROR 2016-12-12 09:33:26,493: 	 Error: crab_DATA_2016H3_rereco is not a valid CRAB project directory.
+ERROR 2016-12-12 09:33:26,494: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 755, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_DATA_2016H3_rereco is not a valid CRAB project directory.
+DEBUG 2016-12-13 04:00:17,485: 	 Executing command: 'kill'
+DEBUG 2016-12-13 04:00:17,514: 	 Found CRAB cache file /home/users/rclsa/.crab3
+ERROR 2016-12-13 04:00:17,573: 	 Error: crab_DY2.py is not a valid CRAB project directory.
+ERROR 2016-12-13 04:00:17,573: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/kill.py", line 62, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_DY2.py is not a valid CRAB project directory.
+DEBUG 2016-12-13 04:00:18,312: 	 Executing command: 'kill'
+DEBUG 2016-12-13 04:00:18,313: 	 Found CRAB cache file /home/users/rclsa/.crab3
+ERROR 2016-12-13 04:00:18,314: 	 Error: crab_SingleElectron_B.py is not a valid CRAB project directory.
+ERROR 2016-12-13 04:00:18,314: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/kill.py", line 62, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_SingleElectron_B.py is not a valid CRAB project directory.
+DEBUG 2016-12-13 04:00:18,844: 	 Executing command: 'kill'
+DEBUG 2016-12-13 04:00:18,845: 	 Found CRAB cache file /home/users/rclsa/.crab3
+ERROR 2016-12-13 04:00:18,876: 	 Error: crab_SingleElectron_C.py is not a valid CRAB project directory.
+ERROR 2016-12-13 04:00:18,876: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/kill.py", line 62, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_SingleElectron_C.py is not a valid CRAB project directory.
+DEBUG 2016-12-13 04:00:19,527: 	 Executing command: 'kill'
+DEBUG 2016-12-13 04:00:19,528: 	 Found CRAB cache file /home/users/rclsa/.crab3
+ERROR 2016-12-13 04:00:19,529: 	 Error: crab_SingleElectron_D.py is not a valid CRAB project directory.
+ERROR 2016-12-13 04:00:19,529: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/kill.py", line 62, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_SingleElectron_D.py is not a valid CRAB project directory.
+DEBUG 2016-12-13 04:00:19,983: 	 Executing command: 'kill'
+DEBUG 2016-12-13 04:00:19,983: 	 Found CRAB cache file /home/users/rclsa/.crab3
+ERROR 2016-12-13 04:00:19,984: 	 Error: crab_SingleElectron_E.py is not a valid CRAB project directory.
+ERROR 2016-12-13 04:00:19,984: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/kill.py", line 62, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_SingleElectron_E.py is not a valid CRAB project directory.
+DEBUG 2016-12-13 04:00:21,459: 	 Executing command: 'kill'
+DEBUG 2016-12-13 04:00:21,459: 	 Found CRAB cache file /home/users/rclsa/.crab3
+ERROR 2016-12-13 04:00:21,460: 	 Error: crab_SingleElectron_H2.py is not a valid CRAB project directory.
+ERROR 2016-12-13 04:00:21,460: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/kill.py", line 62, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_SingleElectron_H2.py is not a valid CRAB project directory.
+DEBUG 2016-12-13 04:02:04,411: 	 Executing command: 'kill'
+DEBUG 2016-12-13 04:02:04,412: 	 Found CRAB cache file /home/users/rclsa/.crab3
+DEBUG 2016-12-13 04:02:04,421: 	 Checking credentials
+DEBUG 2016-12-13 04:02:04,421: 	 Found proxy file /tmp/x509up_u31150
+DEBUG 2016-12-13 04:02:04,421: 	 Getting proxy life time left
+DEBUG 2016-12-13 04:02:04,524: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31150 -timeleft
+ output : 431481
+
+ error: 
+ retcode : 0
+DEBUG 2016-12-13 04:02:04,628: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31150 -actimeleft
+ output : 431481
+
+ error: 
+ retcode : 0
+DEBUG 2016-12-13 04:02:04,628: 	 Proxy valid for 119:51:21 hours
+ERROR 2016-12-13 04:02:04,629: 	 Cannot find .requestcache file in CRAB project directory /home/users/rclsa/RegressionTraining/miniTreeMaker/CMSSW_8_0_22/src/SimpleFlatTreeProducer/SimpleNtuplizer/cfgs/crab_DATA_2016G_rereco
+ERROR 2016-12-13 04:02:04,629: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 321, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 450, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /home/users/rclsa/RegressionTraining/miniTreeMaker/CMSSW_8_0_22/src/SimpleFlatTreeProducer/SimpleNtuplizer/cfgs/crab_DATA_2016G_rereco
+DEBUG 2016-12-14 12:37:58,545: 	 Executing command: 'status'
+DEBUG 2016-12-14 12:37:58,545: 	 Found CRAB cache file /home/users/rclsa/.crab3
+ERROR 2016-12-14 12:37:58,547: 	 Error: crab_DATA_2016H_rereco is not a valid CRAB project directory.
+ERROR 2016-12-14 12:37:58,547: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 755, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611-comp3/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_DATA_2016H_rereco is not a valid CRAB project directory.
