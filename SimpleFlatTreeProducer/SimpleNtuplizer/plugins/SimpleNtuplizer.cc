@@ -651,7 +651,6 @@ void SimpleNtuplizer::analyze( const edm::Event& iEvent, const edm::EventSetup& 
     nElectronsMatched_ = 0;
     edm::View<pat::Electron>::const_iterator ele = electrons->begin();
     for (const pat::Electron &el : *electrons) {
-      // Minimal solution
       {
 	edm::Handle<edm::ValueMap<bool> > tight_id_decisions;
 	iEvent.getByToken(electronTightIdMapToken_,tight_id_decisions);	  
@@ -664,8 +663,17 @@ void SimpleNtuplizer::analyze( const edm::Event& iEvent, const edm::EventSetup& 
 
       if (el.superCluster()->clusters()[el.superCluster()->clusters().size()-1].isAvailable() && el.pt() > 10.) { 
         findTag             ( el, (el.superCluster()->rawEnergy()/el.energy()), iEvent, iSetup );
-	if (tp_mll < 30) continue; // very conservative so that we can correct
 	setElectronVariables( el, iEvent, iSetup );
+      }
+    }
+
+    nPhotons_ = 0;
+    nPhotonsMatched_ = 0;
+    for (const pat::Photon &pho : *photons) {
+
+      if (pho.superCluster()->clusters()[pho.superCluster()->clusters().size()-1].isAvailable() && pho.pt() > 10.) { 
+        findTag             ( pho, (pho.superCluster()->rawEnergy()/pho.energy()), iEvent, iSetup );
+	setPhotonVariables( pho, iEvent, iSetup );
       }
     }
     

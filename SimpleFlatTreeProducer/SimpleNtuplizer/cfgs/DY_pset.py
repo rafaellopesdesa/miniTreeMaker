@@ -21,7 +21,7 @@ readFiles = cms.untracked.vstring()
 secFiles = cms.untracked.vstring() 
 
 readFiles.extend([
-    'file:00200284-F15C-E611-AA9B-002590574776.root', 
+    '/store/relval/CMSSW_9_0_0_pre4/RelValZEE_13/MINIAODSIM/PU25ns_90X_upgrade2017_realistic_v6_A2-v1/00000/56C22EEB-B8F4-E611-B380-0CC47A4C8E86.root', 
     ])
 secFiles.extend([
     ])

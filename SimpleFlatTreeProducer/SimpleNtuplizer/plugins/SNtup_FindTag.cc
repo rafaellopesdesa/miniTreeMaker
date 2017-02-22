@@ -73,7 +73,7 @@ void SimpleNtuplizer::findTag(
     float uncorr = rawEnergy/energy;
     
     auto electron = (*el);
-    passKinematics = electron.pt() > 35. && fabs(electron.eta()) < 1.4;
+    passKinematics = electron.pt() > 35. && fabs(electron.eta()) < 2.5;
     //    std::cout << "pass kinematics " << passKinematics << std::endl;
     if (!passKinematics) continue;
     
@@ -106,8 +106,10 @@ void SimpleNtuplizer::findTag(
       if (!triggerMatch) continue;
     }
     
-    float mass = (electron.p4()*uncorr+object.p4()*corrToRaw).mass();
-    float pt = (electron.p4()*uncorr+object.p4()*corrToRaw).pt();
+    //    float mass = (electron.p4()*uncorr+object.p4()*corrToRaw).mass();
+    //    float pt = (electron.p4()*uncorr+object.p4()*corrToRaw).pt();
+    float mass = (electron.p4()+object.p4()).mass();
+    float pt = (electron.p4()+object.p4()).pt();
     //    std::cout << "Found a tag with mass " << mass << std::endl;
     if (fabs(mass-91.2) < fabs(tp_mll-91.2)) {
       tp_mll = mass;
