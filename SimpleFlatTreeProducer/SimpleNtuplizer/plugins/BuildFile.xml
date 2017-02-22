@@ -31,7 +31,7 @@
 <use   name="CondFormats/L1TObjects"/>
 <use   name="CondFormats/DataRecord"/>
 <use   name="CondFormats/HLTObjects"/>
-
+<use   name="PhysicsTools/HepMCCandAlgos"/>
 
 <flags EDM_PLUGIN="1"/>
 <flags   CXXFLAGS="-g -O0"/>

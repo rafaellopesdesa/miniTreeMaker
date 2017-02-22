@@ -245,6 +245,7 @@ SimpleNtuplizer::SimpleNtuplizer(const edm::ParameterSet& iConfig):
     electronTree_->Branch( "genEta",                        &genEta_e         );
     electronTree_->Branch( "genMass",                       &genMass_e        );
     electronTree_->Branch( "genEnergy",                     &genEnergy_e      );
+    electronTree_->Branch( "genBornEnergy",                 &genBornEnergy_e  );
     electronTree_->Branch( "genPdgId",                      &genPdgId_e       );
     electronTree_->Branch( "genStatus",                     &genStatus_e      );
 

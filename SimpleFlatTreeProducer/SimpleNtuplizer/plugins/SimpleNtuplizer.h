@@ -348,6 +348,7 @@ class SimpleNtuplizer : public edm::EDAnalyzer {
         Float_t genEta_e;
         Float_t genMass_e;
         Float_t genEnergy_e;
+	Float_t genBornEnergy_e;
         Int_t   genPdgId_e;
         Int_t   genStatus_e;
 

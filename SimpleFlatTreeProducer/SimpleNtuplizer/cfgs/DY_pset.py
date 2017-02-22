@@ -71,11 +71,15 @@ process.een_analyzer = cms.EDAnalyzer(
 ########################################
 
 from PhysicsTools.SelectorUtils.tools.vid_id_tools import *
-from PhysicsTools.SelectorUtils.centralIDRegistry import central_id_registry
-process.load("RecoEgamma.ElectronIdentification.egmGsfElectronIDs_cfi")
-process.egmGsfElectronIDs.physicsObjectSrc = cms.InputTag('slimmedElectrons',"","PAT")
+
+dataFormat = DataFormat.MiniAOD
+switchOnVIDElectronIdProducer(process, dataFormat)
+my_id_modules = [
+    'RecoEgamma.ElectronIdentification.Identification.cutBasedElectronHLTPreselecition_Summer16_V1_cff'
+    ]
+for idmod in my_id_modules:
+    setupAllVIDIdsInModule(process,idmod,setupVIDElectronSelection)
 setupAllVIDIdsInModule(process,'RecoEgamma.ElectronIdentification.Identification.cutBasedElectronID_Summer16_80X_V1_cff',setupVIDElectronSelection)        
-process.egmGsfElectronIDSequence = cms.Sequence(process.egmGsfElectronIDs)
 
 
 # Trigger    
@@ -84,4 +88,4 @@ process.TFileService = cms.Service(
     fileName = cms.string('output.root')
     )
     
-process.p = cms.Path(process.egmGsfElectronIDSequence * process.een_analyzer)
+process.p = cms.EndPath(process.egmGsfElectronIDSequence * process.een_analyzer)

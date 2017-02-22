@@ -1,4 +1,5 @@
 #include "SimpleNtuplizer.h"
+#include "PhysicsTools/HepMCCandAlgos/interface/MCTruthHelper.h"
 
 // Function that actually reads values from the AODSIM input file
 void SimpleNtuplizer::setElectronVariables(
@@ -374,7 +375,7 @@ bool SimpleNtuplizer::matchElectronToGenParticle(
     // Only use the electron if it's matched successfully
     bool successful_match = false;
     const reco::GenParticle* matched_genParticle;
-
+    MCTruthHelper<reco::GenParticle> helper;
 
     // =====================================
     // Loop over genParticles
@@ -425,6 +426,7 @@ bool SimpleNtuplizer::matchElectronToGenParticle(
     genEta_e        = matched_genParticle->eta();
     genMass_e       = matched_genParticle->mass();
     genEnergy_e     = matched_genParticle->energy();
+    genBornEnergy_e = helper.firstCopy(*matched_genParticle)->energy();
     genPdgId_e      = matched_genParticle->pdgId();
     genStatus_e     = matched_genParticle->status();
 
