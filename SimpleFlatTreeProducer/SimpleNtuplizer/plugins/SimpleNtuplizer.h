@@ -181,7 +181,9 @@ class SimpleNtuplizer : public edm::EDAnalyzer {
 	Float_t weight_;
 	Float_t trueNumInteractions_;
 	
-        Int_t isMatched_ = 1; // Always 1 but it's there so old regression .root files can be ran
+        Int_t isMatched_e;
+        Int_t isMatched_p;
+        Int_t isMatched_c;
 
         Int_t nPV_;         // Number of reconstructed primary vertices
         Int_t nElectrons_;

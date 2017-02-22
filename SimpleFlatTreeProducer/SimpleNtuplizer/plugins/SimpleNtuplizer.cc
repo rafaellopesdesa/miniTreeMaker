@@ -100,7 +100,7 @@ SimpleNtuplizer::SimpleNtuplizer(const edm::ParameterSet& iConfig):
 
     electronTree_->Branch( "pt",                            &pt_e       );
     electronTree_->Branch( "scIsEB",                        &isEB_e     );
-    electronTree_->Branch( "isMatched",                     &isMatched_ ); // Only matched is saved, so should be 1
+    electronTree_->Branch( "isMatched",                     &isMatched_e ); // Only matched is saved, so should be 1
     electronTree_->Branch( "passID",                        &passID_e);
     electronTree_->Branch( "tagpassID",                     &tp_tagpassID);
     electronTree_->Branch("SF_RECO", &SF_RECO_e);
@@ -293,7 +293,7 @@ SimpleNtuplizer::SimpleNtuplizer(const edm::ParameterSet& iConfig):
 
     clusterTree_->Branch( "pt",                            &pt_c       );
     clusterTree_->Branch( "scIsEB",                        &isEB_c     );
-    clusterTree_->Branch( "isMatched",                     &isMatched_ ); // Only matched is saved, so should be 1
+    clusterTree_->Branch( "isMatched",                     &isMatched_c ); // Only matched is saved, so should be 1
 
     // =====================================
     // All actually used for training
@@ -401,7 +401,7 @@ SimpleNtuplizer::SimpleNtuplizer(const edm::ParameterSet& iConfig):
 
     photonTree_->Branch( "pt",                            &pt_p       );
     photonTree_->Branch( "scIsEB",                        &isEB_p     );
-    photonTree_->Branch( "isMatched",                     &isMatched_ ); // Only matched is saved, so should be 1
+    photonTree_->Branch( "isMatched",                     &isMatched_p ); // Only matched is saved, so should be 1
 
 
     // =====================================

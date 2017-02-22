@@ -14,8 +14,7 @@ void SimpleNtuplizer::setPhotonVariables(
 
     // Try to match to genParticle; quit function if photon is not matched
     if (!isData_) {
-      bool successful_match = matchPhotonToGenParticle( photon );
-      if(!successful_match) return;
+      isMatched_p = matchPhotonToGenParticle( photon ) ? 1 : 0;
     }
     
     // Increase count of matched photons in event
