@@ -79,7 +79,6 @@ void SimpleNtuplizer::findTag(
     
     const edm::Ptr<pat::Electron> elPtr(electrons, el - electrons->begin() );
     passID = (*tight_id_decisions)[elPtr];
-    if (passID) tp_tagpassID = 1; else tp_tagpassID = 0;
     
     if (isData_ || !isData_) {
       pat::TriggerObjectStandAlone TO;
@@ -115,6 +114,7 @@ void SimpleNtuplizer::findTag(
       tp_tagpt = electron.pt()*uncorr;
       tp_tageta = electron.eta();
       tp_tagphi = electron.phi();
+      if (passID) tp_tagpassID = 1; else tp_tagpassID = 0;
     }
   }
   return;
